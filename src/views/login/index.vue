@@ -9,14 +9,14 @@
                     <i class="el-icon-key"></i>
                 </div>
                 <div class="login-form">
-                    <el-form ref="form" :model="form">
+                    <el-form ref="form">
                           <el-form-item>
                             <el-input placeholder="请输入账号" prefix-icon="el-icon-user"></el-input>
                         </el-form-item>
                         <el-form-item>
                             <el-input placeholder="请输入密码" prefix-icon="el-icon-lock"></el-input>
                         </el-form-item>
-                        <el-button type="primary">登录</el-button>
+                        <el-button type="primary" @click="toLogin">登录</el-button>
                     </el-form>
                 </div>
             </div>
@@ -28,6 +28,11 @@ export default {
     data () {
         return {
             
+        }
+    },
+    methods: {
+        toLogin() {
+            this.$router.push('/')
         }
     }
 }
